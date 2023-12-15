@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+  font-family: digital-7;
+  src: url('digital-7.ttf');
+}
+
+body {
+  background-color: #212229;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.clock {
+  background-color: #333;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, .8),
+    1px 1px 0 0 rgba(0, 0, 0, .8),
+    2px 2px 0 0 rgba(0, 0, 0, .8),
+    3px 3px 0 0 rgba(0, 0, 0, .8),
+    4px 4px 0 0 rgba(0, 0, 0, .8),
+    5px 5px 0 0 rgba(0, 0, 0, .8),
+    6px 6px 0 0 rgba(0, 0, 0, .8),
+    7px 7px 0 0 rgba(0, 0, 0, .8),
+    8px 8px 0 0 rgba(0, 0, 0, .8),
+    9px 9px 0 0 rgba(0, 0, 0, .8),
+    10px 10px 0 0 rgba(0, 0, 0, .8),
+    11px 11px 0 0 rgba(0, 0, 0, .8),
+    12px 12px 0 0 rgba(0, 0, 0, .8),
+    13px 13px 0 0 rgba(0, 0, 0, .8),
+    14px 14px 0 0 rgba(0, 0, 0, .8),
+    15px 15px 0 0 rgba(0, 0, 0, .8),
+    16px 16px 0 0 rgba(0, 0, 0, .8),
+    17px 17px 0 0 rgba(0, 0, 0, .8),
+    18px 18px 0 0 rgba(0, 0, 0, .8),
+    19px 19px 0 0 rgba(0, 0, 0, .8),
+    20px 20px 0 0 rgba(0, 0, 0, .8);
+  position: relative;
+}
+
+.frame {
+  background-color: #2f3640;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 1px solid #7f8fa6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.brand {
+  font-size: 35px;
+  color: #bdc3c7;
+  font-weight: 500;
+  position: absolute;
+  top: 50px;
+  left: 48%;
+  transform: translateX(-48%);
+  z-index: 10;
+}
+
+.slogn {
+  font-size: 13px;
+  font-weight: 500;
+  color: #95a5a6;
+  position: absolute;
+  top: 95px;
+  left: 48%;
+  transform: translateX(-48%);
+  z-index: 4;
+}
+
+.display {
+  color: white;
+  font-size: 80px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f3640;
+  width: 80%;
+  height: 80px;
+  position: absolute;
+  z-index: 10;
+  top: 150px;
+  left: 40px;
+  border-radius: 50px;
+}
+
+.display div {
+  font-family: digital-7;
+  max-width: 100%;
+  background-color: #2f3640;
+  align-items: center;
+  align-items:center;
+  font-size:50%;
+  font-style:oblique;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  border-radius: 10%;
+  
+}
+
+.hrs,
+.min,
+.sec,
+.ms {
+  width: 30px;
+  text-align: center;
+}
+
+.colon {
+  opacity: 0.2;
+}
+
+.clock.start-animation .colon {
+  animation: blink 0.5s ease infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+button:hover {
+  background-color: #b7e610;
+  transform: scale(1.1);
+}
+
+.buttons {
+  position: absolute;
+  z-index: 3;
+  bottom: 20px;
+  left: 20px;
+  background-color: #7f8fa6;
+  height: 200px;
+  width: 90%;
+  border-radius: 0 0 180px 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons p {
+  text-transform: uppercase;
+  color: #2f3640;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: white;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.group {
+  margin-top: 30px;
+}
+
+.buttons p span {
+  background-color: #2f3640;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.start {
+  background-color: #44bd32;
+}
+
+.stop {
+  background-color: #ea2027;
+}
+
+.reset {
+  background-color: #8e44ad;
+}
+
+.lap {
+  background-color: #3498db;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.lap:hover {
+  background-color: #2980b9;
+}
+
+.lap-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.lap-container {
+    max-height: 160px; /* Adjust the maximum height based on your preference */
+    overflow-y: auto;
+    position: absolute;
+    bottom: -500px; /* Adjust the distance from the bottom */
+    left: 60%;
+    transform: translateX(-50%);
+    z-index: 2; /* Set a higher z-index to make it appear above the clock */
+}
+
+.lap-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.lap-number {
+  font-size: 12px;
+  margin-right: 5px;
+  font-style: oblique;
+  font-display:initial;
+}
+
+.lap-time {
+  font-size: 12px;
+  font-style: oblique;
+  font-display:initial;
+  font-weight: 500;
+}
+
+/* Your existing background gradient code */
+body {
+  perspective: 1000px;
+}
+
+body::before {
+  content: "";
+  position:fixed ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #3498db, #e74c3c);
+  transform: translateZ(-1px) scale(2);
+  z-index:-1;
+}
+
+.container {
+    position: relative;
+  }
+  
